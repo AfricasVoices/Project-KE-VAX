@@ -23,10 +23,11 @@ def fetch_from_rapid_pro(user, google_cloud_credentials_file_path, raw_data_dir,
         google_cloud_credentials_file_path, rapid_pro_source.token_file_url).strip()
 
     rapid_pro = RapidProClient(rapid_pro_source.domain, rapid_pro_token)
+    workspace_name = rapid_pro.get_workspace_name()
 
     # Load the previous export of contacts if it exists, otherwise fetch all contacts from Rapid Pro.
-    raw_contacts_path = f"{raw_data_dir}/{rapid_pro_source.contacts_file_name}_raw.json"
-    contacts_log_path = f"{raw_data_dir}/{rapid_pro_source.contacts_file_name}_log.jsonl"
+    raw_contacts_path = f"{raw_data_dir}/{workspace_name}_contacts_raw.json"
+    contacts_log_path = f"{raw_data_dir}/{workspace_name}_contacts_log.jsonl"
     try:
         log.info(f"Loading raw contacts from file '{raw_contacts_path}'...")
         with open(raw_contacts_path) as raw_contacts_file:
@@ -84,6 +85,7 @@ def fetch_from_rapid_pro(user, google_cloud_credentials_file_path, raw_data_dir,
         json.dump([contact.serialize() for contact in raw_contacts], raw_contacts_file)
     log.info(f"Saved {len(raw_contacts)} contacts")
 
+
 def fetch_listening_groups_csvs(google_cloud_credentials_file_path, pipeline_configuration, raw_data_dir):
     for listening_group_csv_url in pipeline_configuration.listening_group_csv_urls:
         listening_group = listening_group_csv_url.split("/")[-1]
@@ -92,6 +94,7 @@ def fetch_listening_groups_csvs(google_cloud_credentials_file_path, pipeline_con
         with open(f'{raw_data_dir}/{listening_group}', "wb") as listening_group_output_file:
             google_cloud_utils.download_blob_to_file(
                 google_cloud_credentials_file_path, listening_group_csv_url, listening_group_output_file)
+
 
 def main(user, google_cloud_credentials_file_path, pipeline_configuration_file_path, raw_data_dir):
     # Read the settings from the configuration file
