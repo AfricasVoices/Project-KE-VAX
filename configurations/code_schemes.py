@@ -11,5 +11,6 @@ def _open_scheme(filename):
 
 class CodeSchemes(object):
     VACCINATION_THOUGHTS = _open_scheme("vaccination_thoughts.json")
+    OTHER_MESSAGES = _open_scheme("other_messages.json")
 
     WS_CORRECT_DATASET = _open_scheme("ws_correct_dataset.json")

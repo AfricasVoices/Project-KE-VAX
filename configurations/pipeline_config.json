@@ -34,8 +34,8 @@
     {"RapidProKey": "Vaccination_Thoughts (Run ID) - ke_vax_poll", "PipelineKey": "vaccination_thoughts_run_id"},
     {"RapidProKey": "Vaccination_Thoughts (Time) - ke_vax_poll", "PipelineKey": "sent_on"},
 
-    {"RapidProKey": "Vaccination_Thoughts_Catchall (Text) - ke_vax_activation", "PipelineKey": "vaccination_thoughts_raw", "IsActivationMessage": true},
-    {"RapidProKey": "Vaccination_Thoughts_Catchall (Run ID) - ke_vax_activation", "PipelineKey": "vaccination_thoughts_run_id"},
+    {"RapidProKey": "Vaccination_Thoughts_Catchall (Text) - ke_vax_activation", "PipelineKey": "other_messages_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Vaccination_Thoughts_Catchall (Run ID) - ke_vax_activation", "PipelineKey": "other_messages_run_id"},
     {"RapidProKey": "Vaccination_Thoughts_Catchall (Time) - ke_vax_activation", "PipelineKey": "sent_on"}
   ],
   "ProjectStartDate": "2021-03-18T00:00:00+03:00",
