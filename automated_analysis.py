@@ -137,7 +137,7 @@ if __name__ == "__main__":
         AnalysisConfiguration("county", "location_raw", "county_coded", CodeSchemes.KENYA_COUNTY),
         kenya_mapper.export_kenya_counties_map,
         f"{automated_analysis_output_dir}/maps/counties/county_",
-        export_by_theme=True  # TODO pipeline_configuration.automated_analysis.generate_county_theme_distribution_maps
+        export_by_theme=True
     )
 
     log.info(f"Exporting participation maps for each Kenya constituency...")
@@ -147,7 +147,7 @@ if __name__ == "__main__":
         AnalysisConfiguration("constituency", "location_raw", "constituency_coded", CodeSchemes.KENYA_CONSTITUENCY),
         kenya_mapper.export_kenya_constituencies_map,
         f"{automated_analysis_output_dir}/maps/constituencies/constituency_",
-        export_by_theme=True  # TODO pipeline_configuration.automated_analysis.generate_constituency_theme_distribution_maps
+        export_by_theme=True
     )
 
     log.info("Automated analysis python script complete")

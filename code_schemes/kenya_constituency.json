@@ -4,6 +4,16 @@
   "Version": "0.0.0.3",
   "Codes": [
     {
+      "CodeID": "code-E-720cdb66",
+      "CodeType": "Meta",
+      "MetaCode": "escalate",
+      "DisplayText": "meta: ESCALATE",
+      "NumericValue": -100080,
+      "StringValue": "escalate",
+      "VisibleInCoda": true,
+      "Shortcut": "e"
+    },
+    {
       "CodeID": "code-b8bbb7e8",
       "DisplayText": "ainabkoi",
       "CodeType": "Normal",
@@ -3237,6 +3247,15 @@
       "NumericValue": -50,
       "StringValue": "NIC",
       "VisibleInCoda": false
+    },
+    {
+      "CodeID": "code-NOC-4eb70633",
+      "ControlCode": "NOC",
+      "StringValue": "NOC",
+      "DisplayText": "Noise (Other Channel)",
+      "VisibleInCoda": true,
+      "NumericValue": -60,
+      "CodeType": "Control"
     },
     {
       "CodeID": "code-STOP-08b832a8",

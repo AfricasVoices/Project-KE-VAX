@@ -81,7 +81,7 @@ def get_demog_coding_plans(pipeline_name):
                     fold_strategy=FoldStrategies.assert_label_ids_equal
                 )
             ],
-            # ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("gender"),
+            ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("gender"),
             raw_field_fold_strategy=FoldStrategies.assert_equal
         ),
 
@@ -108,7 +108,7 @@ def get_demog_coding_plans(pipeline_name):
                        )
                    ],
                    code_imputation_function=code_imputation_functions.impute_age_category,
-                   # ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("age"),
+                   ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("age"),
                    raw_field_fold_strategy=FoldStrategies.assert_equal),
 
         CodingPlan(dataset_name="location",
@@ -132,7 +132,7 @@ def get_demog_coding_plans(pipeline_name):
                        )
                    ],
                    code_imputation_function=code_imputation_functions.impute_kenya_location_codes,
-                   # ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("location"),
+                   ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("location"),
                    raw_field_fold_strategy=FoldStrategies.assert_equal),
 
         CodingPlan(dataset_name="disabled",
@@ -148,7 +148,7 @@ def get_demog_coding_plans(pipeline_name):
                            fold_strategy=FoldStrategies.assert_label_ids_equal
                        )
                    ],
-                   # ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("disabled"),
+                   ws_code=CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("disabled"),
                    raw_field_fold_strategy=FoldStrategies.assert_equal)
     ]
 
