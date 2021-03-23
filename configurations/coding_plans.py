@@ -27,6 +27,25 @@ def get_rqa_coding_plans(pipeline_name):
                 )
             ],
             raw_field_fold_strategy=FoldStrategies.concatenate
+        ),
+
+        CodingPlan(
+            raw_field="other_messages_raw",
+            dataset_name="other_messages",
+            time_field="sent_on",
+            run_id_field="other_messages_run_id",
+            coda_filename="KE_VAX_other_messages.json",
+            icr_filename="other_messages.csv",
+            coding_configurations=[
+                CodingConfiguration(
+                    coding_mode=CodingModes.MULTIPLE,
+                    code_scheme=CodeSchemes.OTHER_MESSAGES,
+                    coded_field="other_messages_coded",
+                    analysis_file_key="other_messages",
+                    fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.OTHER_MESSAGES)
+                )
+            ],
+            raw_field_fold_strategy=FoldStrategies.concatenate
         )
     ]
 

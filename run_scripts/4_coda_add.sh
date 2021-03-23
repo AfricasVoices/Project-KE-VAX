@@ -16,6 +16,7 @@ DATA_ROOT=$3
 
 DATASETS=(
     "KE_VAX_vaccination_thoughts"
+    "KE_VAX_other_thoughts"
 )
 
 cd "$CODA_V2_ROOT/data_tools"
