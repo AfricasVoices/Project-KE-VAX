@@ -35,7 +35,6 @@ if __name__ == "__main__":
 
     for demog in ["gender", "age", "location", "disabled"]:
         print()
-        print(demog)
         input_datasets = glob.glob(f"{input_dir}/*_{demog}.json")
         output_messages = dict()  # of message id -> message
         conflicting_messages = set()  # of message id. This will contain messages that appear in multiple datasets and have different codes
