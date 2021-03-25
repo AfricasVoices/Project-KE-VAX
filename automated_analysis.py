@@ -3,6 +3,7 @@ import csv
 from collections import OrderedDict
 import sys
 
+from core_data_modules.analysis.mapping import participation_maps, kenya_mapper
 from core_data_modules.cleaners import Codes
 from core_data_modules.logging import Logger
 from core_data_modules.traced_data.io import TracedDataJsonIO
@@ -10,6 +11,7 @@ from core_data_modules.util import IOUtils
 from core_data_modules.analysis import AnalysisConfiguration, engagement_counts, theme_distributions, \
     repeat_participations, sample_messages, traffic_analysis, analysis_utils
 
+from configurations.code_schemes import CodeSchemes
 from src.lib import PipelineConfiguration
 
 log = Logger(__name__)
@@ -89,78 +91,6 @@ if __name__ == "__main__":
             f
         )
 
-    log.info(f'Computing repeat and new participation per show ...')
-    # Computes the number of new and repeat consented individuals who participated in each radio show.
-    # Repeat participants are consented individuals who participated in previous shows prior to the target show.
-    # New participants are consented individuals who participated in target show but din't participate in previous shows.
-    repeat_new_participation_map = OrderedDict()  # of rqa_raw_field to participation metrics.
-
-    rqa_raw_fields =  [plan.raw_field for plan in PipelineConfiguration.RQA_CODING_PLANS]
-
-    #TODO: update to use responded() once moved to core
-    for rqa_raw_field in rqa_raw_fields:
-        target_radio_show = rqa_raw_field  # radio show in which we are calculating repeat and new participation metrics for.
-
-        target_radio_show_participants = set()  # contains uids of individuals who participated in target radio show.
-        for ind in individuals:
-            if ind["consent_withdrawn"] == Codes.TRUE:
-                continue
-
-            if target_radio_show in ind:
-                target_radio_show_participants.add(ind['uid'])
-
-        previous_radio_shows = []  # rqa_raw_fields of shows that aired before the target radio show.
-        for rqa_raw_field in rqa_raw_fields:
-            if rqa_raw_field == target_radio_show:
-                break
-
-            previous_radio_shows.append(rqa_raw_field)
-
-        previous_radio_shows_participants = set()  # uids of individuals who participated in previous radio shows.
-        for rqa_raw_field in previous_radio_shows:
-            for ind in individuals:
-                if ind["consent_withdrawn"] == Codes.TRUE:
-                    continue
-
-                if rqa_raw_field in ind:
-                    previous_radio_shows_participants.add(ind['uid'])
-
-        # Check for uids of individuals who participated in target and previous shows.
-        repeat_participants = target_radio_show_participants.intersection(previous_radio_shows_participants)
-
-        # Check for uids of individuals who participated in target show but din't participate in previous shows.
-        new_participants = target_radio_show_participants.difference(previous_radio_shows_participants)
-
-        repeat_new_participation_map[target_radio_show] = {
-            "Radio Show": target_radio_show,  # Todo switch to dataset name
-            "No. of opt-in participants": len(target_radio_show_participants),
-            "No. of opt-in participants that are new": len(new_participants),
-            "No. of opt-in participants that are repeats": len(repeat_participants),
-            "% of opt-in participants that are new": None,
-            "% of opt-in participants that are repeats": None
-        }
-
-        # Compute:
-        #  -% of opt-in participants that are new, by computing No. of opt-in participants that are new / No. of opt-in participants
-        #  * 100, to 1 decimal place.
-        #  - % of opt-in participants that are repeats, by computing No. of opt-in participants that are repeats / No. of opt-in participants
-        #  * 100, to 1 decimal place.
-        if len(new_participants) > 0:
-            repeat_new_participation_map[target_radio_show]["% of opt-in participants that are new"] = \
-                round(len(new_participants) / len(target_radio_show_participants) * 100, 1)
-            repeat_new_participation_map[target_radio_show]["% of opt-in participants that are repeats"] = \
-                round(len(repeat_participants) / len(target_radio_show_participants) * 100, 1)
-
-    with open(f"{automated_analysis_output_dir}/per_show_repeat_and_new_participation.csv", "w") as f:
-        headers = ["Radio Show", "No. of opt-in participants", "No. of opt-in participants that are new",
-                   "No. of opt-in participants that are repeats", "% of opt-in participants that are new",
-                   "% of opt-in participants that are repeats"]
-        writer = csv.DictWriter(f, fieldnames=headers, lineterminator="\n")
-        writer.writeheader()
-
-        for row in repeat_new_participation_map.values():
-            writer.writerow(row)
-
     log.info("Computing demographic distributions...")
     with open(f"{automated_analysis_output_dir}/demographic_distributions.csv", "w") as f:
         theme_distributions.export_theme_distributions_csv(
@@ -199,5 +129,25 @@ if __name__ == "__main__":
                 pipeline_configuration.automated_analysis.traffic_labels,
                 f
             )
+
+    log.info(f"Exporting participation maps for each Kenya county...")
+    participation_maps.export_participation_maps(
+        individuals, CONSENT_WITHDRAWN_KEY,
+        coding_plans_to_analysis_configurations(PipelineConfiguration.RQA_CODING_PLANS),
+        AnalysisConfiguration("county", "location_raw", "county_coded", CodeSchemes.KENYA_COUNTY),
+        kenya_mapper.export_kenya_counties_map,
+        f"{automated_analysis_output_dir}/maps/counties/county_",
+        export_by_theme=True
+    )
+
+    log.info(f"Exporting participation maps for each Kenya constituency...")
+    participation_maps.export_participation_maps(
+        individuals, CONSENT_WITHDRAWN_KEY,
+        coding_plans_to_analysis_configurations(PipelineConfiguration.RQA_CODING_PLANS),
+        AnalysisConfiguration("constituency", "location_raw", "constituency_coded", CodeSchemes.KENYA_CONSTITUENCY),
+        kenya_mapper.export_kenya_constituencies_map,
+        f"{automated_analysis_output_dir}/maps/constituencies/constituency_",
+        export_by_theme=True
+    )
 
     log.info("Automated analysis python script complete")
