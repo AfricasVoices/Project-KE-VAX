@@ -157,6 +157,33 @@
       "VisibleInCoda": true
     },
     {
+      "CodeID": "code-e4813c5c",
+      "CodeType": "Normal",
+      "MetaCode": "gratitude",
+      "DisplayText": "questions about vaccines",
+      "NumericValue": 20,
+      "StringValue": "questions_about_vaccines",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-a4a7bf37",
+      "CodeType": "Normal",
+      "MetaCode": "gratitude",
+      "DisplayText": "priority groups",
+      "NumericValue": 21,
+      "StringValue": "priority_groups",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-3cfe8dfc",
+      "CodeType": "Normal",
+      "MetaCode": "gratitude",
+      "DisplayText": "other theme",
+      "NumericValue": 22,
+      "StringValue": "other_theme",
+      "VisibleInCoda": true
+    },
+    {
       "CodeID": "code-NA-f93d3eb7",
       "CodeType": "Control",
       "ControlCode": "NA",
