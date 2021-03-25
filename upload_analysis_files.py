@@ -90,6 +90,18 @@ if __name__ == "__main__":
             paths_to_upload, f"{pipeline_configuration.drive_upload.automated_analysis_dir}/graphs",
             target_folder_is_shared_with_me=True, recursive=True)
 
+        paths_to_upload = glob(f"{automated_analysis_input_dir}/maps/counties/*.png")
+        log.info(f"Uploading {len(paths_to_upload)} county maps to Drive...")
+        drive_client_wrapper.update_or_create_batch(
+            paths_to_upload, f"{pipeline_configuration.drive_upload.automated_analysis_dir}/maps/counties",
+            target_folder_is_shared_with_me=True, recursive=True, fix_duplicates=True)
+
+        paths_to_upload = glob(f"{automated_analysis_input_dir}/maps/constituencies/*.png")
+        log.info(f"Uploading {len(paths_to_upload)} constituency maps to Drive")
+        drive_client_wrapper.update_or_create_batch(
+            paths_to_upload, f"{pipeline_configuration.drive_upload.automated_analysis_dir}/maps/constituencies/",
+            target_folder_is_shared_with_me=True, recursive=True, fix_duplicates=True)
+
     else:
         log.info(
             "Skipping uploading to Google Drive (because the pipeline configuration json does not contain the key "

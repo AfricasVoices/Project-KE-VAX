@@ -45,6 +45,8 @@ if __name__ == "__main__":
     automated_analysis_output_dir = args.automated_analysis_output_dir
 
     IOUtils.ensure_dirs_exist(automated_analysis_output_dir)
+    IOUtils.ensure_dirs_exist(f"{automated_analysis_output_dir}/maps/counties")
+    IOUtils.ensure_dirs_exist(f"{automated_analysis_output_dir}/maps/constituencies")
     IOUtils.ensure_dirs_exist(f"{automated_analysis_output_dir}/graphs")
 
     log.info("Loading Pipeline Configuration File...")
