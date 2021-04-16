@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 
 from core_data_modules.logging import Logger
 from core_data_modules.traced_data.io import TracedDataJsonIO
@@ -10,7 +11,7 @@ from storage.google_cloud import google_cloud_utils
 from temba_client.v2 import Contact, Run
 
 from src.lib import PipelineConfiguration
-from src.lib.pipeline_configuration import RapidProSource
+from src.lib.pipeline_configuration import RapidProSource, GCloudBucketSource
 
 log = Logger(__name__)
 
@@ -86,6 +87,22 @@ def fetch_from_rapid_pro(user, google_cloud_credentials_file_path, raw_data_dir,
     log.info(f"Saved {len(raw_contacts)} contacts")
 
 
+def fetch_from_gcloud_bucket(google_cloud_credentials_file_path, raw_data_dir, gcloud_source):
+    log.info("Fetching data from a gcloud bucket...")
+    for blob_url in gcloud_source.activation_flow_urls + gcloud_source.survey_flow_urls:
+        flow = blob_url.split("/")[-1]
+
+        traced_runs_output_path = f"{raw_data_dir}/{flow}"
+        if os.path.exists(traced_runs_output_path):
+            log.info(f"File '{traced_runs_output_path}' for flow '{flow}' already exists; skipping download")
+            continue
+
+        log.info(f"Saving '{flow}' to file '{traced_runs_output_path}'...")
+        with open(traced_runs_output_path, "wb") as traced_runs_output_file:
+            google_cloud_utils.download_blob_to_file(
+                google_cloud_credentials_file_path, blob_url, traced_runs_output_file)
+
+
 def fetch_listening_groups_csvs(google_cloud_credentials_file_path, pipeline_configuration, raw_data_dir):
     for listening_group_csv_url in pipeline_configuration.listening_group_csv_urls:
         listening_group = listening_group_csv_url.split("/")[-1]
@@ -121,6 +138,8 @@ def main(user, google_cloud_credentials_file_path, pipeline_configuration_file_p
         if isinstance(raw_data_source, RapidProSource):
             fetch_from_rapid_pro(user, google_cloud_credentials_file_path, raw_data_dir, phone_number_uuid_table,
                                  raw_data_source)
+        elif isinstance(raw_data_source, GCloudBucketSource):
+            fetch_from_gcloud_bucket(google_cloud_credentials_file_path, raw_data_dir, raw_data_source)
         else:
             assert False, f"Unknown raw_data_source type {type(raw_data_source)}"
 
