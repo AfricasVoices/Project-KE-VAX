@@ -91,6 +91,8 @@ class PipelineConfiguration(object):
         for raw_data_source in configuration_dict["RawDataSources"]:
             if raw_data_source["SourceType"] == "RapidPro":
                 raw_data_sources.append(RapidProSource.from_configuration_dict(raw_data_source))
+            elif raw_data_source["SourceType"] == "GCloudBucket":
+                raw_data_sources.append(GCloudBucketSource.from_configuration_dict(raw_data_source))
             else:
                 assert False, f"Unknown SourceType '{raw_data_source['SourceType']}'. " \
                     f"Must be 'RapidPro'"
@@ -280,6 +282,11 @@ class AbstractRemoteURLSource(RawDataSource):
             validators.validate_url(survey_flow_url, f"survey_flow_urls[{i}]", "gs")
 
 
+class GCloudBucketSource(AbstractRemoteURLSource):
+    def __init__(self, activation_flow_urls, survey_flow_urls):
+        super().__init__(activation_flow_urls, survey_flow_urls)
+
+
 class PhoneNumberUuidTable(object):
     def __init__(self, firebase_credentials_file_url, table_name):
         """
@@ -304,6 +311,7 @@ class PhoneNumberUuidTable(object):
     def validate(self):
         validators.validate_url(self.firebase_credentials_file_url, "firebase_credentials_file_url", scheme="gs")
         validators.validate_string(self.table_name, "table_name")
+
 
 class OperationsDashboard(object):
     def __init__(self, firebase_credentials_file_url):
