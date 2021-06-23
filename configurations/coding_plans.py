@@ -22,8 +22,8 @@ def clean_age_with_range_filter(text):
         return Codes.NOT_CODED
 
 
-def get_rqa_coding_plans(pipeline_name):
-    return [
+
+KE_VAX_RQA_PLANS = [
         CodingPlan(
             raw_field="vaccination_thoughts_raw",
             dataset_name="vaccination_thoughts",
@@ -62,6 +62,119 @@ def get_rqa_coding_plans(pipeline_name):
             raw_field_fold_strategy=FoldStrategies.concatenate
         )
     ]
+
+KE_ENGAGEMENT_RQA_PLANS = [
+    CodingPlan(
+        raw_field="chatting_apps_raw",
+        dataset_name="chatting_apps",
+        time_field="sent_on",
+        run_id_field="chatting_apps_run_id",
+        coda_filename="KE_Engagement_poll_chatting_apps.json",
+        icr_filename="chatting_apps.csv",
+        coding_configurations=[
+            CodingConfiguration(
+                coding_mode=CodingModes.MULTIPLE,
+                code_scheme=CodeSchemes.ENGAGEMENT_POLL_CHATTING_APPS,
+                coded_field="chatting_apps_coded",
+                analysis_file_key="chatting_apps",
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.ENGAGEMENT_POLL_CHATTING_APPS)
+            )
+        ],
+        raw_field_fold_strategy=FoldStrategies.concatenate,
+        ws_code = CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("KE_Engagement_poll_chatting_apps"),
+    ),
+
+    CodingPlan(
+        raw_field="access_to_internet_raw",
+        dataset_name="access_to_internet",
+        time_field="sent_on",
+        run_id_field="access_to_internet_run_id",
+        coda_filename="KE_Engagement_poll_access_to_internet.json",
+        icr_filename="access_to_internet.csv",
+        coding_configurations=[
+            CodingConfiguration(
+                coding_mode=CodingModes.MULTIPLE,
+                code_scheme=CodeSchemes.ENGAGEMENT_POLL_ACCESS_TO_INTERNET,
+                coded_field="access_to_internet_coded",
+                analysis_file_key="access_to_internet",
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.ENGAGEMENT_POLL_ACCESS_TO_INTERNET)
+            )
+        ],
+        raw_field_fold_strategy=FoldStrategies.concatenate,
+        ws_code = CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("KE_Engagement_poll_access_to_internet"),
+    ),
+
+    CodingPlan(
+        raw_field="facebook_usage_raw",
+        dataset_name="facebook_usage",
+        time_field="sent_on",
+        run_id_field="facebook_usage_run_id",
+        coda_filename="KE_Engagement_poll_facebook_usage.json",
+        icr_filename="facebook_usage.csv",
+        coding_configurations=[
+            CodingConfiguration(
+                coding_mode=CodingModes.MULTIPLE,
+                code_scheme=CodeSchemes.ENGAGEMENT_POLL_FACEBOOK_USAGE,
+                coded_field="facebook_usage_coded",
+                analysis_file_key="facebook_usage",
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.ENGAGEMENT_POLL_FACEBOOK_USAGE)
+            )
+        ],
+        raw_field_fold_strategy=FoldStrategies.concatenate,
+        ws_code = CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("KE_Engagement_poll_facebook_usage"),
+    ),
+
+    CodingPlan(
+        raw_field="radio_stations_raw",
+        dataset_name="radio_stations",
+        time_field="sent_on",
+        run_id_field="radio_stations_run_id",
+        coda_filename="KE_Engagement_poll_radio_stations.json",
+        icr_filename="radio_stations.csv",
+        coding_configurations=[
+            CodingConfiguration(
+                coding_mode=CodingModes.MULTIPLE,
+                code_scheme=CodeSchemes.ENGAGEMENT_POLL_RADIO_STATIONS,
+                coded_field="radio_stations_coded",
+                analysis_file_key="radio_stations",
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.ENGAGEMENT_POLL_RADIO_STATIONS)
+            )
+        ],
+        raw_field_fold_strategy=FoldStrategies.concatenate,
+        ws_code = CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("KE_Engagement_poll_radio_stations"),
+    ),
+
+CodingPlan(
+        raw_field="other_messages_raw",
+        dataset_name="other_messages",
+        time_field="sent_on",
+        run_id_field="other_messages_run_id",
+        coda_filename="KE_Engagement_poll_radio_stations.json",
+        icr_filename="engagement_poll_other_messages.csv",
+        coding_configurations=[
+            CodingConfiguration(
+                coding_mode=CodingModes.MULTIPLE,
+                code_scheme=CodeSchemes.ENGAGEMENT_POLL_OTHER_MESSAGES,
+                coded_field="other_messages_coded",
+                analysis_file_key="other_messages",
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.ENGAGEMENT_POLL_RADIO_STATIONS)
+            )
+        ],
+        raw_field_fold_strategy=FoldStrategies.concatenate,
+        ws_code = CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("KE_Engagement_poll_other_messages"),
+    ),
+
+    ]
+
+
+def get_rqa_coding_plans(pipeline_name):
+    if pipeline_name == "KE-VAX":
+        return KE_VAX_RQA_PLANS
+    else:
+        assert pipeline_name == "KE-Engagement-Poll"
+        return KE_ENGAGEMENT_RQA_PLANS
+
+
 
 
 def get_demog_coding_plans(pipeline_name):
