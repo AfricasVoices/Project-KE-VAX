@@ -149,7 +149,7 @@ CodingPlan(
         dataset_name="other_messages",
         time_field="sent_on",
         run_id_field="other_messages_run_id",
-        coda_filename="KE_Engagement_poll_radio_stations.json",
+        coda_filename="KE_Engagement_poll_other_messages.json",
         icr_filename="engagement_poll_other_messages.csv",
         coding_configurations=[
             CodingConfiguration(
