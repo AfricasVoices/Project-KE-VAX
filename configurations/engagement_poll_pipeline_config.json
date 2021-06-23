@@ -149,12 +149,12 @@
   },
   "DriveUpload": {
     "DriveCredentialsFileURL": "gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
-    "ProductionUploadPath": "ke_vax_analysis_outputs/production.csv",
-    "MessagesUploadPath": "ke_vax_analysis_outputs/messages.csv",
-    "IndividualsUploadPath": "ke_vax_analysis_outputs/individuals.csv",
-    "AutomatedAnalysisDir": "ke_vax_analysis_outputs/automated_analysis"
+    "ProductionUploadPath": "ke_engagement_poll_analysis_outputs/production.csv",
+    "MessagesUploadPath": "ke_engagement_poll_analysis_outputs/messages.csv",
+    "IndividualsUploadPath": "ke_engagement_poll_analysis_outputs/individuals.csv",
+    "AutomatedAnalysisDir": "ke_engagement_poll_analysis_outputs/automated_analysis"
   },
   "MemoryProfileUploadURLPrefix": "gs://avf-pipeline-logs-performance-nearline",
   "DataArchiveUploadURLPrefix": "gs://pipeline-execution-backup-archive",
-  "BucketDirPath": "2021/KE-VAX"
+  "BucketDirPath": "2021/KE-Engagement-Poll"
 }
