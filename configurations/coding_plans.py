@@ -157,7 +157,7 @@ CodingPlan(
                 code_scheme=CodeSchemes.ENGAGEMENT_POLL_OTHER_MESSAGES,
                 coded_field="other_messages_coded",
                 analysis_file_key="other_messages",
-                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.ENGAGEMENT_POLL_RADIO_STATIONS)
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.ENGAGEMENT_POLL_OTHER_MESSAGES)
             )
         ],
         raw_field_fold_strategy=FoldStrategies.concatenate,
