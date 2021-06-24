@@ -24,44 +24,44 @@ def clean_age_with_range_filter(text):
 
 
 KE_VAX_RQA_PLANS = [
-        CodingPlan(
-            raw_field="vaccination_thoughts_raw",
-            dataset_name="vaccination_thoughts",
-            time_field="sent_on",
-            run_id_field="vaccination_thoughts_run_id",
-            coda_filename="KE_VAX_vaccination_thoughts.json",
-            icr_filename="vaccination_thoughts.csv",
-            coding_configurations=[
-                CodingConfiguration(
-                    coding_mode=CodingModes.MULTIPLE,
-                    code_scheme=CodeSchemes.VACCINATION_THOUGHTS,
-                    coded_field="vaccination_thoughts_coded",
-                    analysis_file_key="vaccination_thoughts",
-                    fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.VACCINATION_THOUGHTS)
-                )
-            ],
-            raw_field_fold_strategy=FoldStrategies.concatenate
-        ),
+    CodingPlan(
+        raw_field="vaccination_thoughts_raw",
+        dataset_name="vaccination_thoughts",
+        time_field="sent_on",
+        run_id_field="vaccination_thoughts_run_id",
+        coda_filename="KE_VAX_vaccination_thoughts.json",
+        icr_filename="vaccination_thoughts.csv",
+        coding_configurations=[
+            CodingConfiguration(
+                coding_mode=CodingModes.MULTIPLE,
+                code_scheme=CodeSchemes.VACCINATION_THOUGHTS,
+                coded_field="vaccination_thoughts_coded",
+                analysis_file_key="vaccination_thoughts",
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.VACCINATION_THOUGHTS)
+            )
+        ],
+        raw_field_fold_strategy=FoldStrategies.concatenate
+    ),
 
-        CodingPlan(
-            raw_field="other_messages_raw",
-            dataset_name="other_messages",
-            time_field="sent_on",
-            run_id_field="other_messages_run_id",
-            coda_filename="KE_VAX_other_messages.json",
-            icr_filename="other_messages.csv",
-            coding_configurations=[
-                CodingConfiguration(
-                    coding_mode=CodingModes.MULTIPLE,
-                    code_scheme=CodeSchemes.OTHER_MESSAGES,
-                    coded_field="other_messages_coded",
-                    analysis_file_key="other_messages",
-                    fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.OTHER_MESSAGES)
-                )
-            ],
-            raw_field_fold_strategy=FoldStrategies.concatenate
-        )
-    ]
+    CodingPlan(
+        raw_field="other_messages_raw",
+        dataset_name="other_messages",
+        time_field="sent_on",
+        run_id_field="other_messages_run_id",
+        coda_filename="KE_VAX_other_messages.json",
+        icr_filename="other_messages.csv",
+        coding_configurations=[
+            CodingConfiguration(
+                coding_mode=CodingModes.MULTIPLE,
+                code_scheme=CodeSchemes.OTHER_MESSAGES,
+                coded_field="other_messages_coded",
+                analysis_file_key="other_messages",
+                fold_strategy=partial(FoldStrategies.list_of_labels, CodeSchemes.OTHER_MESSAGES)
+            )
+        ],
+        raw_field_fold_strategy=FoldStrategies.concatenate
+    )
+]
 
 KE_ENGAGEMENT_RQA_PLANS = [
     CodingPlan(
@@ -144,7 +144,7 @@ KE_ENGAGEMENT_RQA_PLANS = [
         ws_code = CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("KE_Engagement_poll_radio_stations"),
     ),
 
-CodingPlan(
+    CodingPlan(
         raw_field="other_messages_raw",
         dataset_name="other_messages",
         time_field="sent_on",
@@ -164,7 +164,7 @@ CodingPlan(
         ws_code = CodeSchemes.WS_CORRECT_DATASET.get_code_with_match_value("KE_Engagement_poll_other_messages"),
     ),
 
-    ]
+]
 
 
 def get_rqa_coding_plans(pipeline_name):
@@ -173,8 +173,6 @@ def get_rqa_coding_plans(pipeline_name):
     else:
         assert pipeline_name == "KE-Engagement-Poll"
         return KE_ENGAGEMENT_RQA_PLANS
-
-
 
 
 def get_demog_coding_plans(pipeline_name):
