@@ -4,6 +4,102 @@
   "Version": "0.0.0.1",
   "Codes": [
     {
+      "CodeID": "code-8cccc5e6",
+      "CodeType": "Normal",
+      "DisplayText": "lack of smart phone",
+      "NumericValue": 0,
+      "StringValue": "lack_of_smart_phone",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-a0a69c68",
+      "CodeType": "Normal",
+      "DisplayText": "facebook",
+      "NumericValue": 1,
+      "StringValue": "facebook",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-6b587d2a",
+      "CodeType": "Normal",
+      "DisplayText": "none only sms",
+      "NumericValue": 2,
+      "StringValue": "none_only_sms",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-9cbbdd22",
+      "CodeType": "Normal",
+      "DisplayText": "through sms",
+      "NumericValue": 3,
+      "StringValue": "through_sms",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-6cf6681b",
+      "CodeType": "Normal",
+      "DisplayText": "yes to all platforms",
+      "NumericValue": 4,
+      "StringValue": "yes_to_all_platforms",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-5f107a9d",
+      "CodeType": "Normal",
+      "DisplayText": "whatsapp",
+      "NumericValue": 5,
+      "StringValue": "whatsapp",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-5dcbde38",
+      "CodeType": "Normal",
+      "DisplayText": "signal",
+      "NumericValue": 6,
+      "StringValue": "signal",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-f9922bb3",
+      "CodeType": "Normal",
+      "DisplayText": "telegram",
+      "NumericValue": 7,
+      "StringValue": "telegram",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-608e2017",
+      "CodeType": "Normal",
+      "DisplayText": "whatsapp and telegram",
+      "NumericValue": 8,
+      "StringValue": "whatsapp_and_telegram",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-823891a1",
+      "CodeType": "Normal",
+      "DisplayText": "whatsapp and signal",
+      "NumericValue": 9,
+      "StringValue": "whatsapp_and_signal",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-1320a779",
+      "CodeType": "Normal",
+      "DisplayText": "telegram and signal",
+      "NumericValue": 10,
+      "StringValue": "telegram_and_signal",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-575ee176",
+      "CodeType": "Normal",
+      "DisplayText": "other theme",
+      "NumericValue": 11,
+      "StringValue": "other_theme",
+      "VisibleInCoda": true
+    },
+    {
       "CodeID": "code-NA-f93d3eb7",
       "CodeType": "Control",
       "ControlCode": "NA",
