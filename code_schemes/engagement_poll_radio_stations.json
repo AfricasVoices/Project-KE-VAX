@@ -4,6 +4,454 @@
   "Version": "0.0.0.1",
   "Codes": [
     {
+      "CodeID": "code-26b98651",
+      "CodeType": "Normal",
+      "DisplayText": "dala fm",
+      "NumericValue": 0,
+      "StringValue": "dala_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-d60b0d90",
+      "CodeType": "Normal",
+      "DisplayText": "ramogi",
+      "NumericValue": 1,
+      "StringValue": "ramogi",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-e57949fd",
+      "CodeType": "Normal",
+      "DisplayText": "radio maisha",
+      "NumericValue": 2,
+      "StringValue": "radio_maisha",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-b66c7188",
+      "CodeType": "Normal",
+      "DisplayText": "mitume radio",
+      "NumericValue": 3,
+      "StringValue": "mitume_radio",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-fe55951e",
+      "CodeType": "Normal",
+      "DisplayText": "kaya fm",
+      "NumericValue": 4,
+      "StringValue": "kaya_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-bde83ce6",
+      "CodeType": "Normal",
+      "DisplayText": "lake victoria",
+      "NumericValue": 5,
+      "StringValue": "lake_victoria",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-ae1d1ae9",
+      "CodeType": "Normal",
+      "DisplayText": "west fm",
+      "NumericValue": 6,
+      "StringValue": "west_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-0487c409",
+      "CodeType": "Normal",
+      "DisplayText": "bbc",
+      "NumericValue": 7,
+      "StringValue": "bbc",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-c7dc410f",
+      "CodeType": "Normal",
+      "DisplayText": "kameme",
+      "NumericValue": 8,
+      "StringValue": "kameme",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-5a143ca7",
+      "CodeType": "Normal",
+      "DisplayText": "kbc",
+      "NumericValue": 9,
+      "StringValue": "kbc",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-f10ac209",
+      "CodeType": "Normal",
+      "DisplayText": "radio citizen",
+      "NumericValue": 10,
+      "StringValue": "radio_citizen",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-7b00f85d",
+      "CodeType": "Normal",
+      "DisplayText": "milele fm",
+      "NumericValue": 11,
+      "StringValue": "milele_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-574b20ab",
+      "CodeType": "Normal",
+      "DisplayText": "radio jambo",
+      "NumericValue": 12,
+      "StringValue": "radio_jambo",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-72881137",
+      "CodeType": "Normal",
+      "DisplayText": "nrg",
+      "NumericValue": 13,
+      "StringValue": "nrg",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-181197dc",
+      "CodeType": "Normal",
+      "DisplayText": "trace",
+      "NumericValue": 14,
+      "StringValue": "trace",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-1b82136a",
+      "CodeType": "Normal",
+      "DisplayText": "sulwe",
+      "NumericValue": 15,
+      "StringValue": "sulwe",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-0a4d2990",
+      "CodeType": "Normal",
+      "DisplayText": "nyota",
+      "NumericValue": 16,
+      "StringValue": "nyota",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-cba598b6",
+      "CodeType": "Normal",
+      "DisplayText": "nam lolwe",
+      "NumericValue": 17,
+      "StringValue": "nam_lolwe",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-a6fb984b",
+      "CodeType": "Normal",
+      "DisplayText": "emoo fm",
+      "NumericValue": 18,
+      "StringValue": "emoo_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-56c8e859",
+      "CodeType": "Normal",
+      "DisplayText": "radio rahma",
+      "NumericValue": 19,
+      "StringValue": "radio_rahma",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-803328df",
+      "CodeType": "Normal",
+      "DisplayText": "kiss fm",
+      "NumericValue": 20,
+      "StringValue": "kiss_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-bdad1544",
+      "CodeType": "Normal",
+      "DisplayText": "musyi fm",
+      "NumericValue": 21,
+      "StringValue": "musyi_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-45826e37",
+      "CodeType": "Normal",
+      "DisplayText": "ghetto",
+      "NumericValue": 22,
+      "StringValue": "ghetto",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-d52d6572",
+      "CodeType": "Normal",
+      "DisplayText": "baitu fm",
+      "NumericValue": 23,
+      "StringValue": "baitu_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-d1a3cc74",
+      "CodeType": "Normal",
+      "DisplayText": "suncity",
+      "NumericValue": 24,
+      "StringValue": "suncity",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-a6c3c003",
+      "CodeType": "Normal",
+      "DisplayText": "inooro fm",
+      "NumericValue": 25,
+      "StringValue": "inooro_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-aa8c559e",
+      "CodeType": "Normal",
+      "DisplayText": "mbci radio",
+      "NumericValue": 26,
+      "StringValue": "mbci_radio",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-311b182c",
+      "CodeType": "Normal",
+      "DisplayText": "musyi",
+      "NumericValue": 27,
+      "StringValue": "musyi",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-2de4d1df",
+      "CodeType": "Normal",
+      "DisplayText": "kass fm",
+      "NumericValue": 28,
+      "StringValue": "kass_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-25927076",
+      "CodeType": "Normal",
+      "DisplayText": "egesa",
+      "NumericValue": 29,
+      "StringValue": "egesa",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-cdb813e1",
+      "CodeType": "Normal",
+      "DisplayText": "bibilia husema",
+      "NumericValue": 30,
+      "StringValue": "bibilia_husema",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-d6e01e1a",
+      "CodeType": "Normal",
+      "DisplayText": "classic fm",
+      "NumericValue": 31,
+      "StringValue": "classic_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-a2c28cea",
+      "CodeType": "Normal",
+      "DisplayText": "county fm",
+      "NumericValue": 32,
+      "StringValue": "county_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-c0e5b203",
+      "CodeType": "Normal",
+      "DisplayText": "spice fm",
+      "NumericValue": 33,
+      "StringValue": "spice_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-41ecff5f",
+      "CodeType": "Normal",
+      "DisplayText": "cha magharibi",
+      "NumericValue": 34,
+      "StringValue": "cha_magharibi",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-a4d86e9d",
+      "CodeType": "Normal",
+      "DisplayText": "bahari fm",
+      "NumericValue": 35,
+      "StringValue": "bahari_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-88c51c17",
+      "CodeType": "Normal",
+      "DisplayText": "hot 96",
+      "NumericValue": 36,
+      "StringValue": "hot_96",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-8ff6ff56",
+      "CodeType": "Normal",
+      "DisplayText": "anguo fm",
+      "NumericValue": 37,
+      "StringValue": "anguo_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-589695c1",
+      "CodeType": "Normal",
+      "DisplayText": "mbaitu fm",
+      "NumericValue": 38,
+      "StringValue": "mbaitu_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-cb615b3d",
+      "CodeType": "Normal",
+      "DisplayText": "muga fm",
+      "NumericValue": 39,
+      "StringValue": "muga_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-70649634",
+      "CodeType": "Normal",
+      "DisplayText": "jesus is lord radio",
+      "NumericValue": 40,
+      "StringValue": "jesus_is_lord_radio",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-98d61c6b",
+      "CodeType": "Normal",
+      "DisplayText": "sauti ya pwani",
+      "NumericValue": 41,
+      "StringValue": "sauti_ya_pwani",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-024c69bf",
+      "CodeType": "Normal",
+      "DisplayText": "mulembe fm",
+      "NumericValue": 42,
+      "StringValue": "mulembe_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-20b01fa4",
+      "CodeType": "Normal",
+      "DisplayText": "radio taifa",
+      "NumericValue": 43,
+      "StringValue": "radio_taifa",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-19767f21",
+      "CodeType": "Normal",
+      "DisplayText": "sky fm",
+      "NumericValue": 44,
+      "StringValue": "sky_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-58524583",
+      "CodeType": "Normal",
+      "DisplayText": "pamoja",
+      "NumericValue": 45,
+      "StringValue": "pamoja",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-847bcb24",
+      "CodeType": "Normal",
+      "DisplayText": "athiani fm",
+      "NumericValue": 46,
+      "StringValue": "athiani_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-c026b345",
+      "CodeType": "Normal",
+      "DisplayText": "chamgei",
+      "NumericValue": 47,
+      "StringValue": "chamgei",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-3265b4cb",
+      "CodeType": "Normal",
+      "DisplayText": "mayian fm",
+      "NumericValue": 48,
+      "StringValue": "mayian_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-b536244e",
+      "CodeType": "Normal",
+      "DisplayText": "mayienga fm",
+      "NumericValue": 49,
+      "StringValue": "mayienga_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-37d5772e",
+      "CodeType": "Normal",
+      "DisplayText": "thome fm",
+      "NumericValue": 50,
+      "StringValue": "thome_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-0af4daca",
+      "CodeType": "Normal",
+      "DisplayText": "radio ingo",
+      "NumericValue": 51,
+      "StringValue": "radio_ingo",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-8452bafd",
+      "CodeType": "Normal",
+      "DisplayText": "baraka fm",
+      "NumericValue": 52,
+      "StringValue": "baraka_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-4e37f8c9",
+      "CodeType": "Normal",
+      "DisplayText": "reuben fm",
+      "NumericValue": 53,
+      "StringValue": "reuben_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-9e9b889a",
+      "CodeType": "Normal",
+      "DisplayText": "kings fm",
+      "NumericValue": 54,
+      "StringValue": "kings_fm",
+      "VisibleInCoda": true
+    },
+    {
+      "CodeID": "code-44392def",
+      "CodeType": "Normal",
+      "DisplayText": "other theme",
+      "NumericValue": 55,
+      "StringValue": "other_theme",
+      "VisibleInCoda": true
+    },
+    {
       "CodeID": "code-NA-f93d3eb7",
       "CodeType": "Control",
       "ControlCode": "NA",
