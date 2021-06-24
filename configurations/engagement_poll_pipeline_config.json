@@ -64,9 +64,9 @@
     {"RapidProKey": "Radio_Stations (Run ID) - ke_engagement_poll", "PipelineKey": "radio_stations_run_id"},
     {"RapidProKey": "Radio_Stations (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
 
-    {"RapidProKey": "Ke_Engagement_Poll_Catch_All (Text) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_raw", "IsActivationMessage": true},
-    {"RapidProKey": "Ke_Engagement_Poll_Catch_All (Run ID) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_run_id"},
-    {"RapidProKey": "Ke_Engagement_Poll_Catch_All (Time) - ke_engagement_poll_catch_all", "PipelineKey": "sent_on"},
+    {"RapidProKey": "Other_Messages (Text) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Other_Messages (Run ID) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_run_id"},
+    {"RapidProKey": "Other_Messages (Time) - ke_engagement_poll_catch_all", "PipelineKey": "sent_on"},
 
     {"RapidProKey": "Constituency (Text) - covid19_s01_demog", "PipelineKey": "location_raw"},
     {"RapidProKey": "Constituency (Time) - covid19_s01_demog", "PipelineKey": "location_time"},
