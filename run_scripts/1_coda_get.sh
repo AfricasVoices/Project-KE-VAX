@@ -18,6 +18,12 @@ DATASETS=(
     "KE_VAX_vaccination_thoughts"
     "KE_VAX_other_messages"
 
+    "KE_Engagement_poll_chatting_apps"
+    "KE_Engagement_poll_access_to_internet"
+    "KE_Engagement_poll_facebook_usage"
+    "KE_Engagement_poll_radio_stations"
+    "KE_Engagement_poll_other_messages"
+
     "Kenya_Pool_age"
     "Kenya_Pool_gender"
     "Kenya_Pool_location"

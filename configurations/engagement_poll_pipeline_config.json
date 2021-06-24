@@ -1,0 +1,160 @@
+{
+  "PipelineName": "KE-Engagement-Poll",
+  "RawDataSources": [
+    {
+      "SourceType": "RapidPro",
+      "Domain": "textit.in",
+      "TokenFileURL": "gs://avf-credentials/ke-vax-textit-token.txt",
+      "ActivationFlowNames": [
+        "ke_engagement_poll",
+        "ke_engagement_poll_catch_all"
+      ],
+      "SurveyFlowNames": [
+
+      ],
+      "TestContactUUIDs": [
+        "74efc650-b89d-4d66-89c5-0e9a99912b8a",
+        "7aaf3325-6222-4d9e-b7ed-93b4ef78e5be",
+        "93b43c8c-e261-4cff-b044-1bc5e6c3d5a1",
+        "51c7a588-6116-4d5b-a751-096fb7360464",
+        "3d5b8ba5-dfdd-4193-aa92-3ee621f0932b",
+        "ca8ab486-22f1-4004-a192-3e4ae8220a00"
+      ]
+    },
+    {
+      "SourceType": "GCloudBucket",
+      "ActivationFlowURLs": [],
+      "SurveyFlowURLs": [
+        "gs://avf-project-datasets/2021/Kenya-Pool/covid19_ke_urban_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/covid19_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/oxfam_wash_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/undp_kenya_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/unicef_covid19_ke_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/worldvision_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/gpsdd_bungoma_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/gpsdd_kilifi_s01_demog.jsonl",
+        "gs://avf-project-datasets/2021/Kenya-Pool/gpsdd_kiambu_s01_demog.jsonl"
+      ]
+    }
+  ],
+  "ListeningGroupCSVURLs": [],
+  "PhoneNumberUuidTable": {
+    "FirebaseCredentialsFileURL": "gs://avf-credentials/avf-id-infrastructure-firebase-adminsdk-6xps8-b9173f2bfd.json",
+    "TableName": "KE-VAX_phone_number_avf_phone_id"
+  },
+  "OperationsDashboard": {
+    "FirebaseCredentialsFileURL": "gs://avf-credentials/avf-dashboards-firebase-adminsdk-gvecb-ef772e79b6.json"
+  },
+  "RapidProKeyRemappings": [
+    {"RapidProKey": "avf_phone_id", "PipelineKey": "uid"},
+
+    {"RapidProKey": "Chatting_Apps (Text) - ke_engagement_poll", "PipelineKey": "chatting_apps_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Chatting_Apps (Run ID) - ke_engagement_poll", "PipelineKey": "chatting_apps_run_id"},
+    {"RapidProKey": "Chatting_Apps (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
+
+    {"RapidProKey": "Access_To_Internet (Text) - ke_engagement_poll", "PipelineKey": "access_to_internet_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Access_To_Internet (Run ID) - ke_engagement_poll", "PipelineKey": "access_to_internet_run_id"},
+    {"RapidProKey": "Access_To_Internet (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
+
+    {"RapidProKey": "Facebook_Usage (Text) - ke_engagement_poll", "PipelineKey": "facebook_usage_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Facebook_Usage (Run ID) - ke_engagement_poll", "PipelineKey": "facebook_usage_run_id"},
+    {"RapidProKey": "Facebook_Usage (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
+
+    {"RapidProKey": "Radio_Stations (Text) - ke_engagement_poll", "PipelineKey": "radio_stations_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Radio_Stations (Run ID) - ke_engagement_poll", "PipelineKey": "radio_stations_run_id"},
+    {"RapidProKey": "Radio_Stations (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
+
+    {"RapidProKey": "Other_Messages (Text) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Other_Messages (Run ID) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_run_id"},
+    {"RapidProKey": "Other_Messages (Time) - ke_engagement_poll_catch_all", "PipelineKey": "sent_on"},
+
+    {"RapidProKey": "Constituency (Text) - covid19_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - covid19_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - covid19_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - covid19_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - covid19_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - covid19_s01_demog", "PipelineKey": "age_time"},
+
+    {"RapidProKey": "Constituency (Text) - covid19_ke_urban_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - covid19_ke_urban_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - covid19_ke_urban_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - covid19_ke_urban_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - covid19_ke_urban_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - covid19_ke_urban_s01_demog", "PipelineKey": "age_time"},
+
+    {"RapidProKey": "Constituency (Text) - undp_kenya_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - undp_kenya_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - undp_kenya_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - undp_kenya_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - undp_kenya_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - undp_kenya_s01_demog", "PipelineKey": "age_time"},
+
+    {"RapidProKey": "Constituency (Text) - unicef_covid19_ke_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - unicef_covid19_ke_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - unicef_covid19_ke_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - unicef_covid19_ke_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - unicef_covid19_ke_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - unicef_covid19_ke_s01_demog", "PipelineKey": "age_time"},
+
+    {"RapidProKey": "Constituency (Text) - oxfam_wash_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - oxfam_wash_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - oxfam_wash_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - oxfam_wash_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - oxfam_wash_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - oxfam_wash_s01_demog", "PipelineKey": "age_time"},
+    {"RapidProKey": "Disabled (Text) - oxfam_wash_s01_demog", "PipelineKey": "disabled_raw"},
+    {"RapidProKey": "Disabled (Time) - oxfam_wash_s01_demog", "PipelineKey": "disabled_time"},
+
+    {"RapidProKey": "Constituency (Text) - worldvision_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - worldvision_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - worldvision_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - worldvision_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - worldvision_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - worldvision_s01_demog", "PipelineKey": "age_time"},
+
+    {"RapidProKey": "Constituency (Text) - gpsdd_kilifi_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - gpsdd_kilifi_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - gpsdd_kilifi_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - gpsdd_kilifi_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - gpsdd_kilifi_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - gpsdd_kilifi_s01_demog", "PipelineKey": "age_time"},
+    {"RapidProKey": "Disabled (Text) - gpsdd_kilifi_s01_demog", "PipelineKey": "disabled_raw"},
+    {"RapidProKey": "Disabled (Time) - gpsdd_kilifi_s01_demog", "PipelineKey": "disabled_time"},
+
+    {"RapidProKey": "Constituency (Text) - gpsdd_kiambu_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - gpsdd_kiambu_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - gpsdd_kiambu_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - gpsdd_kiambu_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - gpsdd_kiambu_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - gpsdd_kiambu_s01_demog", "PipelineKey": "age_time"},
+    {"RapidProKey": "Disabled (Text) - gpsdd_kiambu_s01_demog", "PipelineKey": "disabled_raw"},
+    {"RapidProKey": "Disabled (Time) - gpsdd_kiambu_s01_demog", "PipelineKey": "disabled_time"},
+
+    {"RapidProKey": "Constituency (Text) - gpsdd_bungoma_s01_demog", "PipelineKey": "location_raw"},
+    {"RapidProKey": "Constituency (Time) - gpsdd_bungoma_s01_demog", "PipelineKey": "location_time"},
+    {"RapidProKey": "Gender (Text) - gpsdd_bungoma_s01_demog", "PipelineKey": "gender_raw"},
+    {"RapidProKey": "Gender (Time) - gpsdd_bungoma_s01_demog", "PipelineKey": "gender_time"},
+    {"RapidProKey": "Age (Text) - gpsdd_bungoma_s01_demog", "PipelineKey": "age_raw"},
+    {"RapidProKey": "Age (Time) - gpsdd_bungoma_s01_demog", "PipelineKey": "age_time"},
+    {"RapidProKey": "Disabled (Text) - gpsdd_bungoma_s01_demog", "PipelineKey": "disabled_raw"},
+    {"RapidProKey": "Disabled (Time) - gpsdd_bungoma_s01_demog", "PipelineKey": "disabled_time"}
+  ],
+  "ProjectStartDate": "2021-03-18T00:00:00+03:00",
+  "ProjectEndDate": "2100-01-01T00:00:00+03:00",
+  "FilterTestMessages": false,
+  "MoveWSMessages": true,
+  "AutomatedAnalysis": {
+    "GenerateCountyThemeDistributionMaps": true,
+    "GenerateConstituencyThemeDistributionMaps": true
+  },
+  "DriveUpload": {
+    "DriveCredentialsFileURL": "gs://avf-credentials/pipeline-runner-service-acct-avf-data-core-64cc71459fe7.json",
+    "ProductionUploadPath": "ke_engagement_poll_analysis_outputs/production.csv",
+    "MessagesUploadPath": "ke_engagement_poll_analysis_outputs/messages.csv",
+    "IndividualsUploadPath": "ke_engagement_poll_analysis_outputs/individuals.csv",
+    "AutomatedAnalysisDir": "ke_engagement_poll_analysis_outputs/automated_analysis"
+  },
+  "MemoryProfileUploadURLPrefix": "gs://avf-pipeline-logs-performance-nearline",
+  "DataArchiveUploadURLPrefix": "gs://pipeline-execution-backup-archive",
+  "BucketDirPath": "2021/KE-Engagement-Poll"
+}
