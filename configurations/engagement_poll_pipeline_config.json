@@ -48,9 +48,9 @@
   "RapidProKeyRemappings": [
     {"RapidProKey": "avf_phone_id", "PipelineKey": "uid"},
 
-    {"RapidProKey": "Chatting_Apps_Options (Text) - ke_engagement_poll", "PipelineKey": "chatting_apps_raw", "IsActivationMessage": true},
-    {"RapidProKey": "Chatting_Apps_Options (Run ID) - ke_engagement_poll", "PipelineKey": "chatting_apps_run_id"},
-    {"RapidProKey": "Chatting_Apps_Options (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
+    {"RapidProKey": "Chatting_Apps (Text) - ke_engagement_poll", "PipelineKey": "chatting_apps_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Chatting_Apps (Run ID) - ke_engagement_poll", "PipelineKey": "chatting_apps_run_id"},
+    {"RapidProKey": "Chatting_Apps (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
 
     {"RapidProKey": "Access_To_Internet (Text) - ke_engagement_poll", "PipelineKey": "access_to_internet_raw", "IsActivationMessage": true},
     {"RapidProKey": "Access_To_Internet (Run ID) - ke_engagement_poll", "PipelineKey": "access_to_internet_run_id"},
@@ -60,9 +60,9 @@
     {"RapidProKey": "Facebook_Usage (Run ID) - ke_engagement_poll", "PipelineKey": "facebook_usage_run_id"},
     {"RapidProKey": "Facebook_Usage (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
 
-    {"RapidProKey": "Radio_Station_Options (Text) - ke_engagement_poll", "PipelineKey": "radio_stations_raw", "IsActivationMessage": true},
-    {"RapidProKey": "Radio_Station_Options (Run ID) - ke_engagement_poll", "PipelineKey": "radio_stations_run_id"},
-    {"RapidProKey": "Radio_Station_Options (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
+    {"RapidProKey": "Radio_Stations (Text) - ke_engagement_poll", "PipelineKey": "radio_stations_raw", "IsActivationMessage": true},
+    {"RapidProKey": "Radio_Stations (Run ID) - ke_engagement_poll", "PipelineKey": "radio_stations_run_id"},
+    {"RapidProKey": "Radio_Stations (Time) - ke_engagement_poll", "PipelineKey": "sent_on"},
 
     {"RapidProKey": "Ke_Engagement_Poll_Catch_All (Text) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_raw", "IsActivationMessage": true},
     {"RapidProKey": "Ke_Engagement_Poll_Catch_All (Run ID) - ke_engagement_poll_catch_all", "PipelineKey": "other_messages_run_id"},
