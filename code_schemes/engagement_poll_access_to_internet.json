@@ -42,7 +42,7 @@
       "CodeID": "code-c2590369",
       "CodeType": "Normal",
       "DisplayText": "yes wifi",
-      "StringValue": "yes wifi",
+      "StringValue": "yes_wifi",
       "NumericValue": 3,
       "VisibleInCoda": true,
       "MatchValues": [
@@ -53,7 +53,7 @@
       "CodeID": "code-eda47c16",
       "CodeType": "Normal",
       "DisplayText": "no lack of funds",
-      "StringValue": "no lack of funds",
+      "StringValue": "no_lack_of_funds",
       "NumericValue": 4,
       "VisibleInCoda": true,
       "MatchValues": [
@@ -64,7 +64,7 @@
       "CodeID": "code-8757e730",
       "CodeType": "Normal",
       "DisplayText": "no lack of smartphone",
-      "StringValue": "no lack of smartphone",
+      "StringValue": "no_lack_of_smartphone",
       "NumericValue": 5,
       "VisibleInCoda": true,
       "MatchValues": [
