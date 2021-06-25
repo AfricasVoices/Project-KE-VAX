@@ -19,7 +19,7 @@
       "CodeID": "code-05f66a09",
       "CodeType": "Normal",
       "DisplayText": "yes but no data",
-      "StringValue": "yes but no data",
+      "StringValue": "yes_but_no_data",
       "NumericValue": 1,
       "VisibleInCoda": true,
       "MatchValues": [
