@@ -4,6 +4,82 @@
   "Version": "0.0.0.1",
   "Codes": [
     {
+      "CodeID": "code-d2b4a102",
+      "CodeType": "Normal",
+      "DisplayText": "yes",
+      "NumericValue": 0,
+      "StringValue": "yes",
+      "Shortcut": "y",
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "yes"
+      ]
+    },
+    {
+      "CodeID": "code-283c3982",
+      "CodeType": "Normal",
+      "DisplayText": "no",
+      "Shortcut": "n",
+      "NumericValue": 1,
+      "StringValue": "no",
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "no"
+      ]
+    },
+    {
+      "CodeID": "code-37e9d06f",
+      "CodeType": "Normal",
+      "DisplayText": "yes data bundles",
+      "StringValue": "yes_data_bundles",
+      "NumericValue": 2,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "yes data bundles"
+      ]
+    },
+    {
+      "CodeID": "code-c2590369",
+      "CodeType": "Normal",
+      "DisplayText": "yes wifi",
+      "StringValue": "yes_wifi",
+      "NumericValue": 3,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "yes wifi"
+      ]
+    },
+    {
+      "CodeID": "code-eda47c16",
+      "CodeType": "Normal",
+      "DisplayText": "no lack of funds",
+      "StringValue": "no_lack_of_funds",
+      "NumericValue": 4,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "no lack of funds"
+      ]
+    },
+    {
+      "CodeID": "code-8757e730",
+      "CodeType": "Normal",
+      "DisplayText": "no lack of smartphone",
+      "StringValue": "no_lack_of_smartphone",
+      "NumericValue": 5,
+      "VisibleInCoda": true,
+      "MatchValues": [
+        "no lack of smartphone"
+      ]
+    },
+    {
+      "CodeID": "code-21670b21",
+      "CodeType": "Normal",
+      "DisplayText": "other theme",
+      "NumericValue": 6,
+      "StringValue": "other_theme",
+      "VisibleInCoda": true
+    },
+    {
       "CodeID": "code-NA-f93d3eb7",
       "CodeType": "Control",
       "ControlCode": "NA",
