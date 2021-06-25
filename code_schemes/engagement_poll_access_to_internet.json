@@ -31,7 +31,7 @@
       "CodeID": "code-37e9d06f",
       "CodeType": "Normal",
       "DisplayText": "yes data bundles",
-      "StringValue": "yes data bundles",
+      "StringValue": "yes_data_bundles",
       "NumericValue": 2,
       "VisibleInCoda": true,
       "MatchValues": [
