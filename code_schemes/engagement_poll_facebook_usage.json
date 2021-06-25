@@ -30,7 +30,7 @@
       "CodeID": "code-95d89723",
       "CodeType": "Normal",
       "DisplayText": "yes but no smartphone",
-      "StringValue": "yes but no smartphone",
+      "StringValue": "yes_but_no_smartphone",
       "NumericValue": 2,
       "VisibleInCoda": true,
       "MatchValues": [
@@ -41,7 +41,7 @@
       "CodeID": "code-f156e094",
       "CodeType": "Normal",
       "DisplayText": "no - no smartphone",
-      "StringValue": "no - no smartphone",
+      "StringValue": "no_no_smartphone",
       "NumericValue": 3,
       "VisibleInCoda": true,
       "MatchValues": [
@@ -52,7 +52,7 @@
       "CodeID": "code-7348cfe8",
       "CodeType": "Normal",
       "DisplayText": "no - no fb account",
-      "StringValue": "no - no fb account",
+      "StringValue": "no_no_fb_account",
       "NumericValue": 4,
       "VisibleInCoda": true,
       "MatchValues": [
@@ -63,7 +63,7 @@
       "CodeID": "code-c59ed751",
       "CodeType": "Normal",
       "DisplayText": "no - use sms",
-      "StringValue": "no - use sms",
+      "StringValue": "no_use_sms",
       "NumericValue": 5,
       "VisibleInCoda": true,
       "MatchValues": [
@@ -74,7 +74,7 @@
       "CodeID": "code-e30a5c16",
       "CodeType": "Normal",
       "DisplayText": "no - not every week",
-      "StringValue": "no - not every week",
+      "StringValue": "no_not_every_week",
       "NumericValue": 6,
       "VisibleInCoda": true,
       "MatchValues": [
